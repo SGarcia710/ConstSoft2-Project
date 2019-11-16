@@ -30,7 +30,7 @@
             <div class="card-img-left d-none d-md-flex"></div>
             <div class="card-body">
               <h5 class="card-title text-center">Creación de una cuenta</h5>
-              <form class="form-signin">
+              <form action="./check_signup.php" method="post" class="form-signin">
                 <div class="form-label-group">
                   <input
                     type="text"
@@ -39,6 +39,7 @@
                     placeholder="Username"
                     required
                     autofocus
+                    name="username"
                   />
                   <label for="inputUserame">Nombre de Usuario</label>
                 </div>
@@ -50,6 +51,7 @@
                     class="form-control"
                     placeholder="Email address"
                     required
+                    name="email"
                   />
                   <label for="inputEmail">Email</label>
                 </div>
@@ -62,6 +64,7 @@
                     id="inputPassword"
                     class="form-control"
                     placeholder="Password"
+                    name="password1"
                     required
                   />
                   <label for="inputPassword">Contraseña</label>
@@ -73,6 +76,7 @@
                     id="inputConfirmPassword"
                     class="form-control"
                     placeholder="Password"
+                    name="password2"
                     required
                   />
                   <label for="inputConfirmPassword">Confirmar Contraseña</label>
@@ -80,7 +84,7 @@
 
                 <button
                   class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
+                  type="submit" name="send"
                 >
                   Crear cuenta
                 </button>

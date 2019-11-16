@@ -1,7 +1,9 @@
 <?php
 
-  include("../model/login_model.php");
-  $users= new login_model();
+  include("../model/users_model.php");
+
+  $users= new users_model();
   $usersMatrix = $users->get_users();
+
   include("../view/check_login.php");
   ?>

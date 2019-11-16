@@ -29,14 +29,15 @@
           <div class="card card-signin flex-row my-5">
             <div class="card-body">
               <h5 class="card-title text-center">Inicio de Sesión</h5>
-              <form class="form-signin">
-                <div action="login_controller.php" class="form-label-group">
+              <form action="./controller/users_controller.php" method="post" class="form-signin">
+                <div  class="form-label-group">
                   <input
                     type="text"
                     id="inputUserame"
                     class="form-control"
                     placeholder="Username"
                     required
+                    name="username"
                     autofocus
                   />
                   <label for="inputUserame">Nombre de Usuario</label>
@@ -49,13 +50,14 @@
                     class="form-control"
                     placeholder="Email address"
                     required
+                    name="password"
                   />
                   <label for="inputEmail">Contraseña</label>
                 </div>
 
                 <button
                   class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
+                  type="submit" name="send"
                 >
                   Iniciar sesión
                 </button>
