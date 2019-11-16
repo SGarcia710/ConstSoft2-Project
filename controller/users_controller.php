@@ -5,5 +5,5 @@
   $users= new users_model();
   $usersMatrix = $users->get_users();
 
-  include("../view/check_login.php");
+  include("../view/index.php");
   ?>
