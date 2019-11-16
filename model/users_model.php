@@ -8,10 +8,8 @@
       $this->users=array(); //Aquí guardo los dos arreglos (passwords y usernames)
     }
     public function get_users() {
-      $query=$this->db->query("SELECT * FROM users");
+      $query=$this->db->query("SELECT *FROM users");
       while($rows=$query->fetch(PDO::FETCH_ASSOC)){
-        echo "<h1>" .$rows['username_usr']. "</h1> ";
-
         $this->users[]=$rows;
       }
       return $this->users;
