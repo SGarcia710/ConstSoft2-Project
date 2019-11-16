@@ -30,8 +30,7 @@
   $exists=false;
 
   foreach ($usersMatrix as $credential) {
-      echo $credential;
-    if($credential["username"] == $login and $credential["pass"] == $password){
+    if($credential["username_usr"] == $login and $credential["password"] == $password){
       $exists=true;
     }
   }
