@@ -6,6 +6,8 @@
 
   if($password1 == $password2){
     require_once("../model/create_model.php");
+    header("Location: ../index.php");
+    // require_once("../index.php");
   }else{
     echo'<script type="text/javascript">
           alert("Las contraseñas no coinciden.");
