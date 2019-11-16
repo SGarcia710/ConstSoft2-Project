@@ -3,9 +3,9 @@
 	$base = connect::connection();
 
 	try {
-		$sql = "INSERT INTO users VALUES (:username, :email, :password)";
+		$sql = "INSERT INTO users VALUES (null, :username_usr, :email_usr, :password)";
     	$result = $base->prepare($sql);
-    	$result->execute(array(":username"=>$username, ":email"=>$email, ":password"=>$password1));
+    	$result->execute(array(":username_usr"=>$username, ":email_usr"=>$email, ":password"=>$password1));
 	} catch (Exception $e) {
 		if ($e->getcode() == 23000) {
 			echo'<script type="text/javascript">
