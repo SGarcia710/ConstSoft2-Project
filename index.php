@@ -45,14 +45,14 @@
 
                 <div class="form-label-group">
                   <input
-                    type="email"
-                    id="inputEmail"
+                    type="password"
+                    id="inputPassword"
                     class="form-control"
-                    placeholder="Email address"
+                    placeholder="Contraseña"
                     required
                     name="password"
                   />
-                  <label for="inputEmail">Contraseña</label>
+                  <label for="inputPassword">Contraseña</label>
                 </div>
 
                 <button
