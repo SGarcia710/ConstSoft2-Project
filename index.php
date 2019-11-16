@@ -63,7 +63,7 @@
                 </button>
                 <a
                   class="d-block text-center mt-2 small"
-                  href="view/signup.html"
+                  href="view/signup.php"
                   >Crear cuenta</a
                 >
               </form>

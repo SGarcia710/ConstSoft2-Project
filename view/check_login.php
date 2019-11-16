@@ -15,7 +15,7 @@
 
   if($exists == true){
     // echo "<h1> BIENVENIDO AL SISTEMA </h1>";
-    header('Location: ./index.html');
+    header('Location: ./index.php');
   }else{
     echo'<script type="text/javascript">
           alert("No se encuentra en nuestra base de datos.");

@@ -88,7 +88,7 @@
                 >
                   Crear cuenta
                 </button>
-                <a class="d-block text-center mt-2 small" href="../index.html"
+                <a class="d-block text-center mt-2 small" href="../index.php"
                   >Iniciar sesión</a
                 >
               </form>
