@@ -1,14 +1,14 @@
 <?php
 
 // este codigo se debe poner en cada archivo que no queremoes que el usuario lo vea
-    session_start();
-    error_reporting(0);         // no muestra el error de sesion
-    $varsesion=$_SESSION['username'];
-    if($varsesion == null || $varsesion =''){
-        header("Location: ../index.php");
-        // echo('usted no tiene autorizacion');
-        // die();        
-    }    
+session_start();
+error_reporting(0);         // no muestra el error de sesion
+$varsesion = $_SESSION['username'];
+if ($varsesion == null || $varsesion = '') {
+    header("Location: ../index.php");
+    // echo('usted no tiene autorizacion');
+    // die();        
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,12 +60,28 @@
                             <ul class="nav navbar-nav navbar-right main-nav">
                                 <li class="active"><a href="index.php">Inicio</a></li>
                                 <li><a href="history.php">Nosotros</a></li>
-                                <li><a href="products.php">Productos</a></li>
-                                <li><a href="clients.php">Clientes</a></li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Bases de Datos
+                                        <span><i class="fa fa-angle-down"></i></span></a>
+                                    <ul class="dropdown-menu col-sm-4">
+                                        <li>
+                                            <div class="m-menu-content">
+                                                <ul class="col-sm-6">
+                                                    <li class="dropdown-header">Clientes</li>
+                                                    <li><a href="clients.php">Ver clientes</a></li>
+                                                    <li><a href="addClients.php">Agregar clientes</a></li>
+                                                </ul>
+                                                <ul class="col-sm-6">
+                                                    <li class="dropdown-header">Productos</li>
+                                                    <li><a href="products.php">Ver productos</a></li>
+                                                    <li><a href="addProducts.php">Agregar productos</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li><a href="../controller/logout_controller.php">Cerrar sesión</a></li>
-
                             </ul>
-
                         </div>
                     </div>
                 </nav>
@@ -463,10 +479,12 @@
             <div>
                 <div>
                     <ul id="menu">
-                        <li><a href="index.php">Inicio</a></li>
+                        <li class="active"><a href="index.php">Inicio</a></li>
                         <li><a href="history.php">Nosotros</a></li>
-                        <li><a href="products.php">Productos</a></li>
-                        <li><a href="clients.php">Clientes</a></li>
+                        <li><a href="products.php">Ver productos</a></li>
+                        <li><a href="addProducts.php">Agregar productos</a></li>
+                        <li><a href="clients.php">Ver clientes</a></li>
+                        <li><a href="addClients.php">Agregar Clientes</a></li>
                     </ul>
                 </div>
             </div>

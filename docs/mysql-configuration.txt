@@ -1,0 +1,10 @@
+GRANT ALL PRIVILEGES ON *.* TO 'admin-page'@'localhost' IDENTIFIED BY '123456';
+mysql.exe -u admin-page -p (wamp server)
+
+create database pagedb;
+
+create table users(cod_usr int unsigned auto_increment not null, username_usr varchar(25) not null, email_usr varchar(50) not null, password_usr varchar(16) not null, primary key(cod_usr));
+
+create table products(cod_prd int unsigned auto_increment not null, name_prd varchar(40) not null, brand_prd varchar(40) not null, qty_prd int not null, desc_prd varchar(200) not null, primary key(cod_prd));
+
+create table clients(cod_clt int unsigned auto_increment not null, fname_clt varchar(40) not null, lname_clt varchar(40) not null, sex_clt varchar(9) not null, id_clt int not null, email_clt varchar(50) not null, phone_clt varchar(15) not null, primary key(cod_clt));

@@ -1,20 +1,20 @@
 <?php
-class users_model
+class products_model
 {
   private $db;
-  private $users;
+  private $products;
   public function __construct()
   { //Conexión a la base de datos
     require_once("connect.php"); // archivo que conecta a la base de datos
     $this->db = connect::connection(); //Función que hace la conexión a la base de datos
-    $this->users = array();
+    $this->products = array();
   }
-  public function get_users()
+  public function get_products()
   {
-    $query = $this->db->query("SELECT *FROM users");
+    $query = $this->db->query("SELECT *FROM products");
     while ($rows = $query->fetch(PDO::FETCH_ASSOC)) {
-      $this->users[] = $rows;
+      $this->products[] = $rows;
     }
-    return $this->users;
+    return $this->products;
   }
 }

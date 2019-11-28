@@ -5,7 +5,7 @@
   $email=$_POST['email'];
 
   if($password1 == $password2){
-    require_once("../model/create_model.php");
+    require_once("../model/create_users_model.php");
     header("Location: ../index.php");
     // require_once("../index.php");
   }else{
@@ -14,4 +14,3 @@
           window.location.href="./signup.php";
         </script>';
   }
-  ?>
