@@ -102,13 +102,18 @@ if ($varsesion == null || $varsesion = '') {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>12</td>
-                                    <td>Leche entera</td>
-                                    <td>Alquería</td>
-                                    <td>244</td>
-                                    <td>Leche extra grande entera.</td>
-                                </tr>
+                                <?php
+                                include("../controller/products_controller.php");
+                                foreach ($productsMatrix as $product) {
+                                    echo "<tr>";
+                                    echo "<td>" . $product['cod_prd'] . "</td>";
+                                    echo "<td>" . $product['name_prd'] . "</td>";
+                                    echo "<td>" . $product['brand_prd'] . "</td>";
+                                    echo "<td>" . $product['qty_prd'] . "</td>";
+                                    echo "<td>" . $product['desc_prd'] . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>

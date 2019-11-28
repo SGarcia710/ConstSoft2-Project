@@ -94,16 +94,29 @@ if ($varsesion == null || $varsesion = '') {
                             <thead>
                                 <tr>
                                     <th class="col-md-1">Código</th>
-                                    <th class="col-md-5">Nombre de usuario</th>
-                                    <th class="col-md-6">Email</th>
+                                    <th class="col-md-3">Nombre</th>
+                                    <th class="col-md-3">Apellido</th>
+                                    <th class="col-md-1">Sexo</th>
+                                    <th class="col-md-1">Identificación</th>
+                                    <th class="col-md-2">Email</th>
+                                    <th class="col-md-1">Tel.</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Sgarcia810</td>
-                                    <td>sgarcia810@gmail.com</td>
-                                </tr>
+                                <?php
+                                include("../controller/clients_controller.php");
+                                foreach ($clientsMatrix as $client) {
+                                    echo "<tr>";
+                                    echo "<td>" . $client['cod_clt'] . "</td>";
+                                    echo "<td>" . $client['fname_clt'] . "</td>";
+                                    echo "<td>" . $client['lname_clt'] . "</td>";
+                                    echo "<td>" . $client['sex_clt'] . "</td>";
+                                    echo "<td>" . $client['id_clt'] . "</td>";
+                                    echo "<td>" . $client['email_clt'] . "</td>";
+                                    echo "<td>" . $client['phone_clt'] . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
