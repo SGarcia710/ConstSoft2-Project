@@ -12,6 +12,8 @@ foreach ($usersMatrix as $credential) {
 }
 
 if ($exists == true) {
+  session_start();
+  $_SESSION['username']=$username;
   header('Location: ../view/index.php');
 } else {
   echo '<script type="text/javascript">
