@@ -1,13 +1,9 @@
 <?php
-
-// este codigo se debe poner en cada archivo que no queremoes que el usuario lo vea
 session_start();
-error_reporting(0);         // no muestra el error de sesion
+error_reporting(0);
 $varsesion = $_SESSION['username'];
 if ($varsesion == null || $varsesion = '') {
     header("Location: ../index.php");
-    // echo('usted no tiene autorizacion');
-    // die();        
 }
 ?>
 <!DOCTYPE html>
